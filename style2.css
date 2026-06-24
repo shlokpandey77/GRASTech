@@ -1,0 +1,62 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    padding:40px;
+}
+
+.title{
+    text-align:center;
+    color:white;
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#cbd5e1;
+    margin-bottom:40px;
+    font-size:1.1rem;
+}
+
+.car-container{
+    max-width:1400px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+.car-card{
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+    transition:.3s;
+}
+
+
+.car-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.car-info{
+    padding:20px;
+}
+
+.car-info h2{
+    color:#a855f7;
+    margin-bottom:12px;
+}
+
+.car-info p{
+    color:#cbd5e1;
+    line-height:1.6;
+}

@@ -1,0 +1,67 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#0d1117;
+}
+
+.dashboard{
+    width:90%;
+    max-width:1200px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#161b22;
+    border:1px solid #30363d;
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    color:white;
+    box-shadow:0 0 20px rgba(0,255,255,0.15);
+}
+
+.card h3{
+    color:#8b949e;
+    margin-bottom:15px;
+}
+
+.value{
+    font-size:3rem;
+    font-weight:bold;
+    color:#00e5ff;
+}
+
+.speed .value{
+    color:#00ff95;
+}
+
+.rpm .value{
+    color:#ff6b6b;
+}
+
+.fuel .value{
+    color:#ffd93d;
+}
+
+.battery .value{
+    color:#00e5ff;
+}
+
+.gear .value{
+    color:#a855f7;
+}
+
+.temp .value{
+    color:#ff8c42;
+}

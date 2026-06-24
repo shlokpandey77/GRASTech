@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="form-header">
+        <h1>Google form </h1>
+        <p>Please fill out the details below.</p>
+    </div>
+
+    <form>
+
+        <div class="card">
+            <label for="fullname">Full Name *</label>
+            <input type="text" id="fullname" placeholder="Your answer" required>
+        </div>
+
+        <div class="card">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" placeholder="Your answer" required>
+        </div>
+
+        <div class="card">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" placeholder="Your answer" required>
+        </div>
+
+        <div class="card">
+            <label for="college">College Name *</label>
+            <input type="text" id="college" placeholder="Your answer" required>
+        </div>
+
+        <div class="card">
+            <p class="question">Gender</p>
+
+            <div class="option">
+                <input type="radio" id="male" name="gender">
+                <label for="male">Male</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" id="female" name="gender">
+                <label for="female">Female</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" id="other" name="gender">
+                <label for="other">Other</label>
+            </div>
+        </div>
+
+        <div class="card">
+            <p class="question">Skills</p>
+
+            <div class="option">
+                <input type="checkbox" id="html">
+                <label for="html">HTML</label>
+            </div>
+
+            <div class="option">
+                <input type="checkbox" id="css">
+                <label for="css">CSS</label>
+            </div>
+
+            <div class="option">
+                <input type="checkbox" id="javascript">
+                <label for="javascript">JavaScript</label>
+            </div>
+
+            <div class="option">
+                <input type="checkbox" id="python">
+                <label for="python">Python</label>
+            </div>
+        </div>
+
+        <div class="card">
+            <label for="message">Why do you want this internship?</label>
+            <textarea id="message" rows="5" placeholder="Your answer"></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
