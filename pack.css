@@ -1,0 +1,438 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#fff;
+    color:#333;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+/* ===========================
+TOP BAR
+=========================== */
+
+.top-bar{
+    background:#e60000;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 8%;
+}
+
+.social-icons a{
+    color:#fff;
+    margin-right:18px;
+    font-size:18px;
+}
+
+.top-links{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.top-links a{
+    color:#fff;
+    font-size:14px;
+}
+
+/* ===========================
+INFO BAR
+=========================== */
+
+.info-bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 8%;
+    background:#fff;
+}
+
+.logo img{
+    width:170px;
+}
+
+.info-box{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.info-box i{
+    font-size:28px;
+    color:red;
+}
+
+.info-box h4{
+    font-size:16px;
+    color:#d60000;
+}
+
+.info-box p{
+    font-size:13px;
+}
+
+/* ===========================
+NAVBAR
+=========================== */
+
+nav{
+    width:85%;
+    margin:auto;
+    margin-bottom:40px;
+    background:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 30px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+nav ul{
+    display:flex;
+    gap:35px;
+}
+
+nav ul li a{
+    color:#222;
+    font-weight:500;
+}
+
+nav ul li a:hover{
+    color:red;
+}
+
+.call-btn{
+    background:red;
+    color:#fff;
+    padding:14px 28px;
+    border-radius:30px;
+    font-weight:600;
+    text-align:center;
+}
+
+/* ===========================
+HERO
+=========================== */
+
+.hero img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+}
+
+/* ===========================
+SERVICES
+=========================== */
+
+.services{
+    width:90%;
+    margin:60px auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.card{
+    background:#edf4fb;
+    padding:35px 25px;
+    text-align:center;
+    border:1px solid #ddd;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+}
+
+.card i{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.card h2{
+    margin-bottom:15px;
+}
+
+.card p{
+    line-height:28px;
+}
+
+/* ===========================
+ABOUT
+=========================== */
+
+.about{
+    width:80%;
+    margin:70px auto;
+    text-align:center;
+}
+
+.about h1{
+    color:red;
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.about p{
+    font-size:18px;
+    line-height:35px;
+}
+
+/* ===========================
+BOOKING
+=========================== */
+
+.booking-section{
+    display:flex;
+    width:100%;
+}
+
+.booking-form{
+    width:50%;
+    padding:60px;
+    background:#d8832d;
+}
+
+.booking-form h2{
+    color:#fff;
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.row{
+    display:flex;
+    gap:20px;
+    margin-bottom:20px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea{
+
+    width:100%;
+    padding:14px;
+    border:none;
+    outline:none;
+    margin-bottom:20px;
+}
+
+.booking-form button{
+    background:#2e8b57;
+    color:#fff;
+    padding:14px 40px;
+    border:none;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.booking-form button:hover{
+    background:#1b5e20;
+}
+
+.booking-image{
+    width:50%;
+}
+
+.booking-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* ===========================
+FEATURES
+=========================== */
+
+.features{
+
+    width:85%;
+    margin:80px auto;
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+
+}
+
+.feature-box{
+
+    background:#edf4fb;
+
+    padding:35px;
+
+    border-radius:12px;
+
+}
+
+.feature-box h3{
+
+    color:#0077ff;
+
+    margin-bottom:15px;
+
+}
+
+.feature-box p{
+
+    line-height:30px;
+
+}
+
+/* ===========================
+FOOTER
+=========================== */
+
+footer{
+
+    background:#111;
+
+    color:#fff;
+
+    margin-top:80px;
+
+}
+
+.footer-content{
+
+    width:85%;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:40px;
+
+    padding:60px 0;
+
+}
+
+.footer-box h3{
+
+    margin-bottom:20px;
+
+}
+
+.footer-box p{
+
+    line-height:28px;
+
+}
+
+.footer-box ul li{
+
+    margin-bottom:12px;
+
+}
+
+.footer-box ul li a{
+
+    color:#fff;
+
+}
+
+.footer-box ul li a:hover{
+
+    color:red;
+
+}
+
+.copyright{
+
+    text-align:center;
+
+    padding:18px;
+
+    background:#000;
+
+}
+
+/* ===========================
+RESPONSIVE
+=========================== */
+
+@media(max-width:992px){
+
+.services{
+grid-template-columns:repeat(2,1fr);
+}
+
+.features{
+grid-template-columns:1fr;
+}
+
+.booking-section{
+flex-direction:column;
+}
+
+.booking-form,
+.booking-image{
+width:100%;
+}
+
+.info-bar{
+flex-wrap:wrap;
+gap:20px;
+}
+
+nav{
+flex-direction:column;
+gap:20px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+}
+
+@media(max-width:768px){
+
+.services{
+grid-template-columns:1fr;
+}
+
+.footer-content{
+grid-template-columns:1fr;
+}
+
+.row{
+flex-direction:column;
+}
+
+.top-bar{
+flex-direction:column;
+gap:10px;
+text-align:center;
+}
+
+.top-links{
+justify-content:center;
+}
+
+.about h1{
+font-size:30px;
+}
+
+}

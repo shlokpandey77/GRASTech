@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num1 = 10;
+        let num2 = 40;
+        let operator = "+";
+        switch(operator){
+            case "+":
+                console.log("result=", num1 + num2);
+                break;
+            case "-":
+                console.log("result=", num1 - num2);
+                break;
+
+            case "*":
+                console.log("result=", num1 * num2);
+                break;
+
+            case "/":
+                if(num2 !== 0){
+                    console.log("result=", num1 / num2);
+                    
+                } else {
+                    console.log("cannot divide by zero ");
+                    
+                }
+                break;
+            default:
+                console.log("invalid operator ");
+        }
+    </script>
+</body>
+</html>

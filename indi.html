@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+.grid-container{
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+        "header header"
+        "menu content"
+        "footer footer";
+    min-height:100vh;
+}
+
+.header{
+    grid-area:header;
+    background:black;
+    color:salmon;
+    text-align:center;
+    padding:20px;
+}
+
+.menu{
+    grid-area:menu;
+    background:hotpink;
+    padding:20px;
+}
+
+.menu ul{
+    list-style:none;
+}
+
+.menu li{
+    padding:12px;
+    margin:10px 0;
+    background:black;
+    color:palevioletred;
+    text-align:center;
+    border-radius:5px;
+}
+
+.content{
+    grid-area:content;
+    background:whitesmoke;
+    padding:20px;
+}
+
+.footer{
+    grid-area:footer;
+    background:black;
+    color:teal;
+    text-align:center;
+    padding:15px;
+}
+@media (max-width:768px){
+
+    .grid-container{
+        grid-template-columns:1fr;
+        grid-template-areas:
+            "header"
+            "menu"
+            "content"
+            "footer";
+    }
+
+    .menu ul{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:10px;
+    }
+
+    .menu li{
+        flex:1 1 120px;
+        margin:0;
+    }
+}
+</style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header">
+            <h1> HELLO CSE</h1>
+        </div>
+        <div class="menu">
+            <ul>
+                <li>About</li>
+                <li>Home</li>
+                <li>Contact</li>
+                <li>new</li>
+            </ul>
+        </div>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui porro odio fugit, 
+               saepe ratione debitis nesciunt eum ex facere culpa dignissimos exercitationem 
+               distinctio consequuntur dolor perferendis nostrum aspernatur a animi cupiditate. Quia, 
+               ipsa dolores suscipit est ea voluptatem ex placeat quos at consequuntur voluptatibus vero esse non. Porro accusantium provident eum?</p>
+        </div>
+        <div class="footer">
+            Hello Cse is a site used for the experiments
+        </div>
+    </div>
+</body>
+</html>
