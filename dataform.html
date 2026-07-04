@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Data Form</title>
+    <link rel="stylesheet" href="tableform.css">
+</head>
+<body>
+
+    <div class="main-container">
+
+        <!-- Left Form Box -->
+        <div class="form-box">
+            <label class="robot-check">
+                <input type="checkbox" id="robotCheck">
+                I AM NOT A ROBOT
+            </label>
+
+            <label for="name">Name*</label>
+            <input type="text" id="name" placeholder="Enter Name" disabled>
+
+            <label for="email">Email*</label>
+            <input type="email" id="email" placeholder="Enter Email" disabled>
+
+            <button id="addBtn" disabled>Add Data</button>
+        </div>
+
+        <!-- Right Table Box -->
+        <div class="table-box">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tableBody">
+                    <!-- Data will come here -->
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="tableform.js"></script>
+</body>
+</html>
