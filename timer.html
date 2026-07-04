@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Quiz</title>
+    <link rel="stylesheet" href="timer.css">
+</head>
+<body>
+
+    <div class="quiz-box">
+        <div class="timer">
+            <span id="time">10</span>
+        </div>
+
+        <button id="btn">Start</button>
+
+        <div class="question">
+            <span id="first"></span>
+            <span id="sign"></span>
+            <span id="second"></span>
+        </div>
+
+        <input type="number" id="answer" placeholder="Enter Answer">
+
+        <p id="result"></p>
+
+        <div id="confetti-container"></div>
+    </div>
+
+    <script>
+
+let time = 10;
+let timerHandler;
+let correctAnswer = 0;
+
+let timeDisplay = document.getElementById("time");
+let firstNumber = document.getElementById("first");
+let secondNumber = document.getElementById("second");
+let sign = document.getElementById("sign");
+let answerInput = document.getElementById("answer");
+let resultDisplay = document.getElementById("result");
+let button = document.getElementById("btn");
+
+button.addEventListener("click", startQuiz);
+
+function startQuiz() {
+    clearInterval(timerHandler);
+
+    time = 10;
+    timeDisplay.innerText = time;
+
+    answerInput.value = "";
+    answerInput.disabled = false;
+
+    resultDisplay.innerText = "";
+    button.disabled = true;
+
+    let num1 = Math.floor(Math.random() * 20) + 1;
+    let num2 = Math.floor(Math.random() * 20) + 1;
+
+    let operators = ["+", "-", "*", "/"];
+    let randomOperator = operators[Math.floor(Math.random() * operators.length)];
+
+    if (randomOperator === "-" && num2 > num1) {
+        let temp = num1;
+        num1 = num2;
+        num2 = temp;
+    }
+
+    if (randomOperator === "/") {
+        num1 = num1 * num2;
+    }
+
+    firstNumber.innerText = num1;
+    secondNumber.innerText = num2;
+    sign.innerText = randomOperator;
+
+    switch (randomOperator) {
+        case "+":
+            correctAnswer = num1 + num2;
+            break;
+
+        case "-":
+            correctAnswer = num1 - num2;
+            break;
+
+        case "*":
+            correctAnswer = num1 * num2;
+            break;
+
+        case "/":
+            correctAnswer = num1 / num2;
+            break;
+    }
+
+    timerHandler = setInterval(function () {
+        time--;
+        timeDisplay.innerText = time;
+
+        if (time <= 0) {
+            clearInterval(timerHandler);
+            checkAnswer();
+        }
+    }, 1000);
+}
+
+function checkAnswer() {
+    let userAnswer = Number(answerInput.value);
+
+    answerInput.disabled = true;
+    button.disabled = false;
+    button.innerText = "Start Again";
+
+    if (userAnswer === correctAnswer) {
+        resultDisplay.style.color = "green";
+        resultDisplay.innerText = "Right Answer 🎉";
+
+        partyPopper();
+    } else {
+        resultDisplay.style.color = "red";
+        resultDisplay.innerHTML =
+            "Wrong Answer <br> Correct Answer: " + correctAnswer;
+    }
+}
+
+function partyPopper() {
+    let container = document.getElementById("confetti-container");
+
+    for (let i = 0; i < 100; i++) {
+        let confetti = document.createElement("div");
+
+        confetti.className = "confetti";
+
+        let colors = ["red", "blue", "green", "yellow", "purple", "orange"];
+
+        confetti.style.backgroundColor =
+            colors[Math.floor(Math.random() * colors.length)];
+
+        confetti.style.left = Math.random() * window.innerWidth + "px";
+
+        confetti.style.animationDelay = Math.random() * 0.5 + "s";
+
+        container.appendChild(confetti);
+
+        setTimeout(function () {
+            confetti.remove();
+        }, 3000);
+    }
+}
+    </script>
+</body>
+</html>

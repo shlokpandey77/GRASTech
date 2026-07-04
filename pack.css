@@ -11,8 +11,8 @@
 }
 
 body{
-    background:#fff;
-    color:#333;
+    background:black;
+    color:wheat;
 }
 
 a{
@@ -62,7 +62,7 @@ INFO BAR
     justify-content:space-between;
     align-items:center;
     padding:25px 8%;
-    background:#fff;
+    background:black;
 }
 
 .logo img{
@@ -151,10 +151,10 @@ SERVICES
 }
 
 .card{
-    background:#edf4fb;
+    background:black;
     padding:35px 25px;
     text-align:center;
-    border:1px solid #ddd;
+    border:1px solid burlywood;
     transition:.4s;
 }
 
@@ -209,11 +209,11 @@ BOOKING
 .booking-form{
     width:50%;
     padding:60px;
-    background:#d8832d;
+    background:turquoise;
 }
 
 .booking-form h2{
-    color:#fff;
+    color:blanchedalmond;
     text-align:center;
     margin-bottom:30px;
 }
@@ -236,8 +236,8 @@ BOOKING
 }
 
 .booking-form button{
-    background:#2e8b57;
-    color:#fff;
+    background:seagreen;
+    color:hotpink;
     padding:14px 40px;
     border:none;
     cursor:pointer;
@@ -275,7 +275,7 @@ FEATURES
 
 .feature-box{
 
-    background:#edf4fb;
+    background:rebeccapurple;
 
     padding:35px;
 
@@ -285,7 +285,7 @@ FEATURES
 
 .feature-box h3{
 
-    color:#0077ff;
+    color:black;
 
     margin-bottom:15px;
 
